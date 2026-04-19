@@ -1,12 +1,11 @@
+```python
 import openai
 import whisper
 from gtts import gTTS
 import os
 
-# Defina sua chave da OpenAI
 openai.api_key = "SUA_API_KEY_AQUI"
 
-# Carrega o modelo do Whisper
 model = whisper.load_model("base")
 
 def transcrever_audio(caminho_audio):
@@ -24,8 +23,6 @@ def gerar_audio(texto):
     tts = gTTS(text=texto, lang="pt")
     arquivo_saida = "resposta.mp3"
     tts.save(arquivo_saida)
-    
-    # Abre o áudio automaticamente no Windows
     os.system(f"start {arquivo_saida}")
 
 if __name__ == "__main__":
