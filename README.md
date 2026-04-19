@@ -1,3 +1,11 @@
+# Assistente de Voz com IA
+
+Este projeto demonstra a integração entre reconhecimento de fala (Whisper), geração de respostas com IA (ChatGPT) e conversão de texto em voz (gTTS).
+
+O sistema recebe um áudio, converte para texto, gera uma resposta e transforma essa resposta em áudio.
+
+## Código principal
+
 ```python
 import openai
 import whisper
